@@ -1,0 +1,35 @@
+﻿<Window x:Class="PersonalFirewall.AddRuleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PersonalFirewall"
+        mc:Ignorable="d"
+        Title="添加规则" Height="379.914" Width="611.406" FontSize="32" WindowStyle="ToolWindow">
+    <Grid>
+        <Label Content="IP地址：" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="传输方向：" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top"/>
+        <Label Content="对方端口：" HorizontalAlignment="Left" Margin="10,122,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbIP" HorizontalAlignment="Left" Height="51" Margin="185,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" VerticalContentAlignment="Bottom"/>
+        <TextBox x:Name="tbPortTargetStart" HorizontalAlignment="Left" Height="51" Margin="185,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" VerticalContentAlignment="Bottom"/>
+        <Button x:Name="btnConfirm" Content="确认" HorizontalAlignment="Left" Margin="10,286,0,0" VerticalAlignment="Top" Width="285" Click="btnConfirm_Click"/>
+        <Button x:Name="btnCancel" Content="取消" HorizontalAlignment="Left" Margin="300,286,0,0" VerticalAlignment="Top" Width="285" Click="btnCancel_Click"/>
+        <ComboBox x:Name="cbDirection" HorizontalAlignment="Left" Margin="185,70,0,0" VerticalAlignment="Top" Width="400" SelectedIndex="2">
+            <ComboBoxItem Content="Send" HorizontalAlignment="Left" Width="398"/>
+            <ComboBoxItem Content="Recv" HorizontalAlignment="Left" Width="398"/>
+            <ComboBoxItem Content="ALL" HorizontalAlignment="Left" Width="398"/>
+        </ComboBox>
+        <TextBox x:Name="tbPortTargetEnd" HorizontalAlignment="Left" Height="51" Margin="405,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" VerticalContentAlignment="Bottom"/>
+        <Label Content="到" HorizontalAlignment="Left" Margin="363,122,0,0" VerticalAlignment="Top"/>
+        <Label Content="己方端口：" HorizontalAlignment="Left" Margin="10,178,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbPortSelfStart" HorizontalAlignment="Left" Height="51" Margin="185,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" VerticalContentAlignment="Bottom"/>
+        <TextBox x:Name="tbPortSelfEnd" HorizontalAlignment="Left" Height="51" Margin="405,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" VerticalContentAlignment="Bottom"/>
+        <Label Content="到" HorizontalAlignment="Left" Margin="363,178,0,0" VerticalAlignment="Top"/>
+        <Label Content="传输协议：" HorizontalAlignment="Left" Margin="10,229,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbProtocol" HorizontalAlignment="Left" Margin="185,234,0,0" VerticalAlignment="Top" Width="400" SelectedIndex="2">
+            <ComboBoxItem Content="TCP" HorizontalAlignment="Left" Width="398"/>
+            <ComboBoxItem Content="UDP" HorizontalAlignment="Left" Width="398"/>
+            <ComboBoxItem Content="ALL" HorizontalAlignment="Left" Width="398"/>
+        </ComboBox>
+    </Grid>
+</Window>

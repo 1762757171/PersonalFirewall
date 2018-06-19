@@ -1,0 +1,23 @@
+﻿<Window x:Class="PersonalFirewall.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PersonalFirewall"
+        mc:Ignorable="d"
+        Title="第17组作品-个人防火墙" Height="450" Width="800" Closing="Window_Closing">
+    <Grid>
+        <Button x:Name="btnStartFilter" Content="启动过滤" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="200" FontSize="32" Click="btnStartFilter_Click"/>
+        <Button x:Name="btnStopFilter" Content="停止过滤" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top" Width="200" FontSize="32" Click="btnStopFilter_Click" IsEnabled="False"/>
+        <Button x:Name="btnAddRule" Content="添加规则" HorizontalAlignment="Left" Margin="10,140,0,0" VerticalAlignment="Top" Width="200" FontSize="32" Click="btnAddRule_Click"/>
+        <Button x:Name="btnDeleteRule" Content="删除规则" HorizontalAlignment="Left" Margin="10,190,0,0" VerticalAlignment="Top" Width="200" FontSize="32" Click="btnDeleteRule_Click"/>
+        <UniformGrid Columns="3"/>
+        <ListView x:Name="lvRules" HorizontalAlignment="Left" Height="399" Margin="215,10,0,0" VerticalAlignment="Top" Width="567" FontSize="16">
+            <ListView.View>
+                <GridView>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Window>
